@@ -1,0 +1,15 @@
+@use "../../foundation/forward" as *;
+
+.c-button {
+    border: 1px solid $gray;
+    background: linear-gradient(#F2EDE9, #DED8D3);
+    border-radius: 10px;
+    font-weight: $bold;
+    color: $gray;
+}
+
+.c-button--single {
+    @extend .c-button;
+    border-radius: 20px;
+    color: $brown;
+}

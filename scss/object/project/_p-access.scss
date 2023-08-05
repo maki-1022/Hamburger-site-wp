@@ -1,0 +1,93 @@
+@use "../../foundation/forward" as *;
+
+.p-access {
+    background-color: $black;
+    width: 100%;
+    margin-top: 49px;
+    @include tablet {
+        margin-top: 0;
+    }
+    &__map {
+        position: relative; /* iframeとbefore(layer)をabsoluteにするため */
+        width: 100%;
+        // height: 0;        
+        z-index: 1;
+        padding-top: 184%; /* 比率を固定 */
+        @include tablet {
+            padding-top: 50%;
+        }
+        @include pc {
+            padding-top: 42%;
+        }
+         & iframe {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         opacity: 59.71%;
+        //  min-height: 691px;
+         }
+         &::before { /* グレー部分(layer) */
+            content: "";
+            display: block;
+            width: 100%;
+            height: 415px;
+            background-color: rgba(0,0,0,28.55%);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 3;
+            @include tablet {
+                height: 0;
+            }
+            @include pc {
+                width: 61%;
+                height: 100%;
+            }
+         }
+    }
+    &__text {
+        position: relative;
+        z-index: 5;
+        color: $white;
+        width: 79%; 
+        margin: -184% auto 0 auto;
+        @include tablet {
+            margin: -50% auto 0 auto;
+        }
+        @include pc {
+            width: 45%;
+            margin: -42% 8% 0 8%;
+        }
+        & .c-heading {
+            @include font-size(30);
+            font-family: $base-font;
+            margin-top: 42px;
+            &::after {
+                width: 75px;
+                height: 2px
+            }
+            @include pc {
+                @include font-size(36);
+                &::after {
+                    position: absolute;
+                    top: 2.9em
+                }
+            }
+        }
+        & p {
+            @include font-size(14);
+            line-height: 2.4;
+            margin-top: 29px;
+            @include tablet {
+                padding-bottom: 29px;
+            }
+            @include pc {
+                @include font-size(16);
+                line-height: 2.1;
+                margin-top: 109px;
+            }
+        }
+    }
+}

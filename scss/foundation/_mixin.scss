@@ -1,0 +1,20 @@
+@use "variables" as *;
+
+// レスポンシブ
+@mixin pc {
+  @media screen and (min-width: ($pc)) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media screen and (min-width: ($tablet)) {
+    @content;
+  }
+}
+
+
+// font-size指定にremを使う
+@mixin font-size($size, $base: 16) {
+  font-size: $size + px;
+  font-size: ($size / $base) + rem;
+}

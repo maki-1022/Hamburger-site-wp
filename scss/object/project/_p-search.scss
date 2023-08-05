@@ -1,0 +1,39 @@
+@use "../../foundation/forward" as *;
+
+.p-search {
+    text-align: center;
+    margin-top: 40px;
+    height: auto;
+    @include pc {
+        width: 100%;
+        text-align: right;
+        margin-right: 31px;
+    }
+    &__text {
+        height: auto;
+        background-image: url(../../img/mushimegane.svg);
+        background-position: 12px;
+        &.c-input {
+            width: 58%;
+            height: 46px;
+            @include pc {
+                width: 34%;
+            }
+        }
+    }
+    &__button {
+        &.c-button {
+            width: 24%;
+            height: 46px;
+            margin-left: 16px;
+            @include tablet {
+                width: 16%;
+                margin-left: 14px;
+            }
+            @include pc {
+                width: 12%;
+            }
+        }
+    }
+
+}

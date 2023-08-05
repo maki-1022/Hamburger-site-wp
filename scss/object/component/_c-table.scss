@@ -1,0 +1,13 @@
+@use "../../foundation/forward" as *;
+
+.c-table {
+    border-collapse: collapse;
+    width: 100%;
+    & tr {
+        height: 77px;
+    }
+    & td {
+        border: 1px solid $gray;
+        padding-left: 30px;
+    }
+}

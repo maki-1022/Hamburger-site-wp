@@ -1,0 +1,46 @@
+@use "../../foundation/forward" as *;
+
+.c-heading {
+    font-family: $en-heading-font;
+    font-weight: $bold;
+    @include font-size(41);
+    color: $white;
+    position: relative; /* 疑似要素(_)をabsoluteにするため */
+    &::after {
+        content: "";
+        display: inline-block;
+        background-color: $white;
+        width: 33.89px;
+        height: 4px;
+        position: absolute;
+        top: 1.7em;
+        left: 0;
+    }
+}
+
+.c-heading--h2 {
+    font-weight: $bold;
+    @include font-size(28);
+    @include tablet {
+        @include font-size(36);
+    }
+}
+
+.c-heading--h3 {
+    @include font-size(24);
+    @include tablet {
+        @include font-size(28);
+    }
+}
+
+.c-heading--h4 {
+    @include font-size(20);
+}
+
+.c-heading--h5 {
+    @include font-size(20);
+}
+
+.c-heading--h6 {
+    @include font-size(20);
+}

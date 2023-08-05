@@ -1,0 +1,29 @@
+@use "../../foundation/forward" as *;
+
+.p-blockquote {
+    background-color: $light-gray;
+    &__text {
+        width: 89%;
+        margin: 0 auto;
+        padding-top: 30px;
+        @include tablet {
+            width: 85%;
+            padding-top: 50px;
+        }
+    }
+    &__cite {
+        width: 89%;
+        text-align: center;
+        padding-bottom: 27px;
+        @include tablet {
+            width: 85%;
+            margin: 0 auto;
+            text-align: left;
+            padding: 61px 0 57px 0;
+        }
+    }
+    &__link {
+        text-decoration: underline;
+        color: #0000EE;
+    }
+}

@@ -1,0 +1,58 @@
+@use "../../foundation/forward" as *;
+
+.p-panel {
+    position: relative; /* heading部分をabsoluteにするため */
+    width: 100%;
+    & .c-flex {
+        width: 100%;
+        padding-bottom: 16px;
+    }
+    &__bg--left {
+        background-image: url(../../img/TakeOut.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding-top: 54%;
+        min-height: 642px;
+        margin: 20px 5%;
+        @include tablet {
+            margin: 0;
+            height: 100%;
+        }
+        @include pc {
+            padding-top: 134%;
+        }
+    }
+    &__bg--right {
+        @extend .p-panel__bg--left;
+        background-image: url(../../img/EatIn.jpg);
+    }
+    &__heading {
+        position: absolute;
+        top: 13px;
+        left: 35px;
+        @include tablet {
+            left: 11px;
+        }
+        & .c-heading {
+            @include pc {
+                @include font-size(80);
+                &::after {
+                    width: 63px;
+                }
+            }
+        }
+    }
+    &__text {
+        background-color: rgba(255, 255, 255, 0.8);
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+        padding: 16px;
+    }
+    &__text-heading {
+        @include font-size(22);
+        font-weight: $bold;
+        margin-bottom: 8px;
+    }
+}

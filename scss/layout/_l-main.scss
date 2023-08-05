@@ -1,0 +1,8 @@
+@use "../foundation/forward" as *;
+
+.l-main {
+    @include pc {
+        grid-row: 2;
+        grid-column: 1; 
+    }       
+}

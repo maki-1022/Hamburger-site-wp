@@ -1,0 +1,49 @@
+@use "../../foundation/forward" as *;
+
+.p-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0;
+    overflow-y: scroll; /* メニュー内容が多い場合に縦スクロールする */
+    z-index: 100;
+    transition: ease-out .3s;
+    color: $gray;
+    @include pc {
+        position: static;
+        width: 100%;
+        overflow-y: visible;
+    }
+
+    &.is-open {
+        width: 87%;
+        @include tablet {
+            width: 44%;
+        }
+    }
+
+    &__heading {
+        display: none;
+        @include pc {
+            display: block;
+            font-weight: $en-heading-font;
+            @include font-size(34);
+            margin: 84px 0 0 46px;
+        }
+    }
+    &__block {
+        margin: 178px 0 0 46px;
+        @include pc {
+            margin: 130px 0 0 46px;
+        }
+    }
+    &__menu > h3 {
+        margin: 60px 0 40px 0;
+        @include font-size(24);
+    }
+    &__item {
+        margin: 20px;
+        @include font-size(20);
+    }
+}

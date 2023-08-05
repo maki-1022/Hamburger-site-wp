@@ -1,0 +1,17 @@
+@use "../../foundation/forward" as *;
+
+.p-panel-container {
+    @include tablet {
+        margin: 40px 5%;
+        @include pc {
+            margin: 120px 7%;
+        }
+        &__module {
+            display: flex;
+            gap: 40px;
+            @include pc {
+                gap: 80px;
+            }
+        }        
+    }
+}

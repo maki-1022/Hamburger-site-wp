@@ -1,0 +1,46 @@
+@use "../../foundation/forward" as *;
+
+.p-hamburger {
+    font-family: $en-heading-font;
+    @include font-size(20);
+    color: $gray;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 200;
+    transition: 0.3s;
+    @include tablet {
+        @include font-size(34);
+        margin-right: 20px;
+    }
+    @include pc {
+        display: none;
+    }
+
+    // メニュー展開時の×印
+    &.is-open {
+        > span {
+            visibility: hidden;
+        }
+        &::before,
+        &::after {
+            display: block;
+            content: "";
+            width: 45.25px;
+            height: 6px;
+            background-color: $gray;
+            position: absolute;
+            top: 12px;
+            @include tablet {
+                top: 22px;
+                right: 20px;
+            }
+        }
+        &::before {
+            transform: rotate(-45deg);
+        }
+        &::after {
+            transform: rotate(45deg);
+        }
+    }
+}

@@ -1,0 +1,12 @@
+@use "../../foundation/forward" as *;
+
+.p-single-block {
+    & > .c-inner {
+        @include tablet {
+            margin: 0 7%;
+        }
+        @include pc {
+            margin: 0 6.4%;
+        }
+    }
+}

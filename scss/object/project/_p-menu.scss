@@ -1,0 +1,14 @@
+@use "../../foundation/forward" as *;
+
+.p-menu {
+    &__text {
+        line-height: 1.5;
+        margin: 25px 0 19px 0;
+        @include tablet {
+            margin: 20px 0 37px 0;
+        }
+        @include pc {
+            margin: 20px 0 70px 0;
+        }
+    }    
+}

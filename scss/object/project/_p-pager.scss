@@ -1,0 +1,74 @@
+@use "../../foundation/forward" as *;
+
+.p-pager {
+    color: $gray;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 63px 0 29px 0;
+    font-family: $en-heading-font;
+    @include tablet {
+        justify-content: center;
+        margin: 106px 0 32px 0;
+    }
+    @include pc {
+        margin: 150px 0 64px 0;
+    }
+    > span {
+        display: none;
+        @include tablet {
+            display: inline-block;
+            margin-right: 19px;   
+        }
+    }
+    &__arrow {
+        width: 17px;
+    }
+    &__prev {
+        position: relative;
+        left: -30px;
+        top: -2px;
+        @include tablet {
+            display: none;
+        }
+    }
+    &__next {
+        @extend .p-pager__prev;
+        left: 30px;
+        @include tablet {
+            display: none;
+        }
+    }
+    &__item {
+        display: flex;
+        visibility: hidden;
+        @include tablet {
+            visibility: visible;
+        }
+    }
+    &__link {
+        @include tablet {
+            border: 1px solid $gray;
+            background-color: $white;
+            margin: 0 7.5px;
+            text-align: center;
+            line-height: 33px;
+            &:first-child {
+                margin-left: 15px;
+            }
+            &:last-child {
+                margin-right: 15px;
+            }
+            & > a {
+                display: inline-block;
+                width: 35px;
+                height: 35px;
+            }
+            &:hover,
+            :active {
+                color: $white;
+                background-color: $dark-brown;
+            }
+        }
+    }
+}

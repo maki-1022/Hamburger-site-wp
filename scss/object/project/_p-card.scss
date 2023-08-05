@@ -1,0 +1,62 @@
+@use "../../foundation/forward" as *;
+
+.p-card {
+    margin-bottom: 21px;
+    @include tablet {
+        display: flex;
+    }
+    @include pc {
+        margin-bottom: 30px;
+    }
+    &__img {
+        width: 100%;
+        vertical-align: middle;
+        object-fit: cover;
+        @include tablet {
+            width: 50%;
+        }
+    }
+    &__menu {
+        background-color: $dark-brown;
+        color: $white;
+        padding: 32px 5% 43px 5%;
+        @include tablet {
+            width: 50%
+        }
+        & .c-heading--h2 {
+            @include font-size(20);
+            @include pc {
+                @include font-size(36);
+            }
+        }
+
+        & > h3 {
+            @include font-size(16);
+            margin: 21px 0 7px 0;
+            @include pc {
+                @include font-size(24);
+                margin: 44px 0 13px 0;
+            }
+        }
+        & > p {
+            font-weight: $normal;
+            margin-bottom: 40px;
+            @include pc {
+                margin-bottom: 60px;
+            }
+        }
+        & .c-link {
+            width: 163px;
+            height: 42px;
+            text-align: center;
+            padding: 8px 0;
+            margin: 0 auto;
+            @include pc {
+                width: 292px;
+                height: 76px;
+                padding: 24px 0;
+                border-radius: 36px;
+            }
+        }
+    }
+}

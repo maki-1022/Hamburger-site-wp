@@ -1,0 +1,28 @@
+@use "../../foundation/forward" as *;
+
+.p-single-section {
+    & .c-heading--p {
+        margin: 25px 0 36px 0;
+        @include tablet {
+            margin: 55px 0 62px 0;
+        }
+        @include pc {
+            margin: 57px 0 60px 0;
+        }
+    }
+    & .c-heading--h4 {
+        margin: 28px 0 34px 0;
+        @include tablet {
+            margin: 56px 0 73px 0;
+        }
+        @include pc {
+            margin: 56px 0 57px 0;
+        }
+    }
+    & .c-heading--h6 {
+        margin: 27px 0 26px 0;
+        @include tablet {
+            margin : 57px 0 56px 0;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+@use "../foundation/forward" as *;
+
+.l-container {
+    display: grid;
+    min-height: 100vh;    
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    // background-color: beige;
+    @include pc {
+        grid-template-columns: 1fr 19%;
+        grid-template-rows: 217px 1fr 150px;
+    }
+}

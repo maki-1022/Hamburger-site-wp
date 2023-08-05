@@ -1,0 +1,31 @@
+@use "../../foundation/forward" as *;
+
+.c-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 100%;
+    justify-content: flex-end;
+}
+
+.c-flex--row {
+    display: flex;
+    gap: 9px;
+    @include tablet {
+        gap: 21px;
+    }
+    @include pc {
+        gap: 40px;
+    }
+}
+
+.c-flex--wrap {
+    @include tablet {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0 13px;
+    }
+    @include pc {
+        gap: 20px;
+    }
+}
