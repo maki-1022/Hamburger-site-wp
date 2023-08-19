@@ -1,35 +1,14 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="これはpageページです。">
-    <title>page page</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1&family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/ress.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
+<!-- header.phpを読み込むテンプレートタグ -->
+<?php get_header(); ?>
 
-<body>
-    <div class="l-container">
-        <header class="l-header">
-            <h1 class="l-header__logo"><a href="#"><img src="./img/Hamburger.svg" alt="ヘッダーHamburgerロゴ"></a></h1>
-            <!-- ハンバーガーメニュー -->
-            <button class="p-hamburger u-bold js-hamburger">
-                <span>Menu</span>
-            </button>
-            <!-- フォーム -->
-            <form class="p-search" action="#" method="get">
-                <input type="text" class="p-search__text c-input">
-                <button type="submit" class="p-search__button c-button">検索</button>
-            </form>
-        </header>
+    <?php
+    if ( have_posts() ):
+        while ( have_posts() ): the_post();
+    ?>
 
         <main class="l-main">            
             <div class="p-page-visual">
-                <h2 class="p-page-visual__text c-title">ショップについて</h2>
+                <h2 class="p-page-visual__text c-title"><?php the_title(); ?></h2>
             </div>
 
             <section class="p-single-block">
@@ -50,7 +29,7 @@
                     </div>
 
                     <article class="p-content-block p-content-block--01">
-                        <img class="p-content-block--01__img" src="../../img/cooked-food.jpg" alt="ハンバーガーとポテトの写真">
+                        <img class="p-content-block--01__img" src="<?php echo get_theme_file_uri( './img/cooked-food.jpg' ); ?>" alt="ハンバーガーとポテトの写真">
                     </article>
 
                     <article class="p-content-block p-content-block--02">
@@ -157,52 +136,17 @@
             </section>
 
         </main>
+    
+    <?php
+        endwhile;
+    endif;
+    ?>
 
-        <aside class="l-sidebar p-sidebar js-menu">
-            <h2 class="p-sidebar__heading">Menu</h2>
-            <ul class="p-sidebar__block">
-                <li class="p-sidebar__menu"><h3>バーガー</h3>
-                    <ul class="p-sidebar__list">
-                        <li class="p-sidebar__item">ハンバーガー</li>
-                        <li class="p-sidebar__item">チーズバーガー</li>
-                        <li class="p-sidebar__item">テリヤキバーガー</li>
-                        <li class="p-sidebar__item">アボカドバーガー</li>
-                        <li class="p-sidebar__item">フィッシュバーガー</li>
-                        <li class="p-sidebar__item">ベーコンバーガー</li>
-                        <li class="p-sidebar__item">チキンバーガー</li>
-                    </ul>
-                </li>
-                <li class="p-sidebar__menu"><h3>サイド</h3>
-                    <ul class="p-sidebar__list">
-                        <li class="p-sidebar__item">ポテト</li>
-                        <li class="p-sidebar__item">サラダ</li>
-                        <li class="p-sidebar__item">ナゲット</li>
-                        <li class="p-sidebar__item">コーン</li>
-                    </ul>
-                </li>
-                <li class="p-sidebar__menu"><h3>ドリンク</h3>
-                    <ul class="p-sidebar__list">
-                        <li class="p-sidebar__item">コーラ</li>
-                        <li class="p-sidebar__item">ファンタ</li>
-                        <li class="p-sidebar__item">オレンジ</li>
-                        <li class="p-sidebar__item">アップル</li>
-                        <li class="p-sidebar__item">紅茶（Ice/Hot）</li>
-                        <li class="p-sidebar__item">コーヒー（Ice/Hot）</li>
-                    </ul>
-                </li>
-            </ul>
-        </aside>
+<!-- sidebar.phpを読み込むテンプレートタグ -->
+<?php get_sidebar(); ?>
+
         <!-- ハンバーガーメニュー展開時の背景 -->
         <div class="c-cover js-cover"></div> 
 
-        <footer class="l-footer">
-            <ul class="l-footer__menu">
-                <li class="l-footer__list">ショップ情報 | ヒストリー</li>
-                <li class="l-footer__copyright"><small>Copyright: RaiseTech</small></li>
-            </ul>
-        </footer>
-    </div>
-
-    <script src="js/hamburger.js"></script>
-</body>
-</html>
+<!-- footer.phpを読み込むテンプレートタグ -->
+<?php get_footer(); ?>

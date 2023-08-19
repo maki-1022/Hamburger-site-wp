@@ -1,16 +1,12 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="<?php language_attributes(); ?>"> <!-- 管理画面の言語設定を自動的に出力 -->
 <head>
-    <meta charset="UTF-8">    
+    <meta charset="<?php bloginfo( 'charset' ); ?>"> <!-- 使われている文字コードを表示-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="<?php bloginfo( 'description' ); ?>"> <!-- サイトのキャッチフレーズを表示 -->
-    <title><?php bloginfo( 'name' ); ?></title> <!-- サイトのタイトルを表示 -->
     <!-- <link rel="shortcut icon" href="#" type="image/x-icon"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1&family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/ress.css">
-    <link rel="stylesheet" href="css/style.css">
     <?php wp_head(); ?>
 </head>
 
@@ -19,16 +15,13 @@
         <header class="l-header">
             <h1 class="l-header__logo">
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?> "> <!-- ホームURLを取得 -->
-                <img src="./img/Hamburger.svg" alt="ヘッダーHamburgerロゴ">
+                <img src="<?php echo get_theme_file_uri( './img/Hamburger.svg' ); ?>" alt="ヘッダーHamburgerロゴ">
                 </a>
             </h1>
             <!-- ハンバーガーメニュー -->
             <button class="p-hamburger u-bold js-hamburger">
                 <span>Menu</span>
             </button>
-            <!-- フォーム -->
-            <form class="p-search" action="#" method="get">
-                <input type="text" class="p-search__text c-input">
-                <button type="submit" class="p-search__button c-button">検索</button>
-            </form>
+            <!-- searchform.phpを読み込むテンプレートタグ -->
+            <?php get_search_form(); ?>
         </header>

@@ -6,7 +6,6 @@
         </footer>
     </div>
 
-    <script src="js/hamburger.js"></script>
 <?php wp_footer(); ?>
 </body>
 </html>

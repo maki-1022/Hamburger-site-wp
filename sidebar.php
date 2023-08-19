@@ -1,6 +1,10 @@
         <aside class="l-sidebar p-sidebar js-menu">
             <h2 class="p-sidebar__heading">Menu</h2>
             <ul class="p-sidebar__block">
+                <!-- カスタムメニューの呼び出し -->
+                <?php wp_nav_menu( array (
+                    'theme_location' => 'category_nav'
+                ) ); ?>
                 <li class="p-sidebar__menu"><h3>バーガー</h3>
                     <ul class="p-sidebar__list">
                         <li class="p-sidebar__item">ハンバーガー</li>

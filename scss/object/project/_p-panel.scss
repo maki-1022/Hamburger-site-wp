@@ -8,7 +8,7 @@
         padding-bottom: 16px;
     }
     &__bg--left {
-        background-image: url(../../img/TakeOut.jpg);
+        background-image: url(../img/TakeOut.jpg);
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -25,7 +25,7 @@
     }
     &__bg--right {
         @extend .p-panel__bg--left;
-        background-image: url(../../img/EatIn.jpg);
+        background-image: url(../img/EatIn.jpg);
     }
     &__heading {
         position: absolute;

@@ -1,7 +1,7 @@
 @use "../../foundation/forward" as *;
 
 .p-single-visual {
-    background-image: url(../../img/single-visual-sp.jpg);
+    background-image: url(../img/single-visual-sp.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -9,12 +9,12 @@
     height: 229px;
     margin-bottom: 32px;
     @include tablet {
-        background-image: url(../../img/single-visual-tablet.jpg);
+        background-image: url(../img/single-visual-tablet.jpg);
         height: 508px;
         margin-bottom: 50px;
     }
     @include pc {
-        background-image: url(../../img/single-visual-pc.jpg);
+        background-image: url(../img/single-visual-pc.jpg);
     }
     &__text {
         padding: 93px 0  0 26px;

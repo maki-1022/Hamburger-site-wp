@@ -117,7 +117,7 @@ a {
   color: #ffffff;
   text-align: center;
   height: 150px;
-  background-image: url(../../img/footer-layer.png);
+  background-image: url(../img/footer-layer.png);
   background-repeat: repeat;
 }
 @media screen and (min-width: 960px) {
@@ -469,7 +469,7 @@ a {
   position: relative; /* テキストをabsoluteするため */
 }
 .p-home-visual__bg {
-  background-image: url(../../img/main-visual-sp.jpg);
+  background-image: url(../img/main-visual-sp.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -478,7 +478,7 @@ a {
 }
 @media screen and (min-width: 768px) {
   .p-home-visual__bg {
-    background-image: url(../../img/main-visual-tablet.jpg);
+    background-image: url(../img/main-visual-tablet.jpg);
     height: 285px;
   }
 }
@@ -716,7 +716,7 @@ a {
 }
 .p-search__text {
   height: auto;
-  background-image: url(../../img/mushimegane.svg);
+  background-image: url(../img/mushimegane.svg);
   background-position: 12px;
 }
 .p-search__text.c-input {
@@ -754,7 +754,7 @@ a {
   padding-bottom: 16px;
 }
 .p-panel__bg--left, .p-panel__bg--right {
-  background-image: url(../../img/TakeOut.jpg);
+  background-image: url(../img/TakeOut.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -774,7 +774,7 @@ a {
   }
 }
 .p-panel__bg--right {
-  background-image: url(../../img/EatIn.jpg);
+  background-image: url(../img/EatIn.jpg);
 }
 .p-panel__heading {
   position: absolute;
@@ -954,7 +954,7 @@ a {
 }
 
 .p-single-visual {
-  background-image: url(../../img/single-visual-sp.jpg);
+  background-image: url(../img/single-visual-sp.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -964,14 +964,14 @@ a {
 }
 @media screen and (min-width: 768px) {
   .p-single-visual {
-    background-image: url(../../img/single-visual-tablet.jpg);
+    background-image: url(../img/single-visual-tablet.jpg);
     height: 508px;
     margin-bottom: 50px;
   }
 }
 @media screen and (min-width: 960px) {
   .p-single-visual {
-    background-image: url(../../img/single-visual-pc.jpg);
+    background-image: url(../img/single-visual-pc.jpg);
   }
 }
 .p-single-visual__text {
@@ -1212,7 +1212,7 @@ a {
 }
 
 .p-page-visual {
-  background-image: url(../../img/page-visual-sp.jpg);
+  background-image: url(../img/page-visual-sp.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1222,14 +1222,14 @@ a {
 }
 @media screen and (min-width: 768px) {
   .p-page-visual {
-    background-image: url(../../img/page-visual-tablet.jpg);
+    background-image: url(../img/page-visual-tablet.jpg);
     height: 508px;
     margin-bottom: 50px;
   }
 }
 @media screen and (min-width: 960px) {
   .p-page-visual {
-    background-image: url(../../img/page-visual-pc.jpg);
+    background-image: url(../img/page-visual-pc.jpg);
   }
 }
 .p-page-visual__text {

@@ -3,14 +3,14 @@
 .p-home-visual {
     position: relative; /* テキストをabsoluteするため */
     &__bg {
-        background-image: url(../../img/main-visual-sp.jpg);
+        background-image: url(../img/main-visual-sp.jpg);
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
         width: 100%;
         height: 285px;        
         @include tablet {
-            background-image: url(../../img/main-visual-tablet.jpg);
+            background-image: url(../img/main-visual-tablet.jpg);
             height: 285px;
         }
         @include pc {
