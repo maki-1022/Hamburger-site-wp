@@ -20,7 +20,6 @@
 
     add_action( 'after_setup_theme', 'custom_theme_support' );
 
-
     function change_title_tag( $title ) {  
         //条件分岐タグを使ってページにより $title を変更する処理
         if ( is_front_page() && is_home() ) { 
