@@ -46,16 +46,24 @@
             }
         }
         & .c-link {
-            width: 163px;
-            height: 42px;
-            text-align: center;
-            padding: 8px 0;
+            display: flex;      
             margin: 0 auto;
+            width: 163px;
+            height: auto;
             @include pc {
                 width: 292px;
-                height: 76px;
-                padding: 24px 0;
                 border-radius: 36px;
+            }
+            & > a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 163px;
+                height: 42px;
+                @include pc {
+                    width: 292px;
+                    height: 76px;
+                }
             }
         }
     }

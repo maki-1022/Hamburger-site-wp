@@ -29,7 +29,8 @@
 
         <main class="l-main">            
             <div class="p-archive-visual">
-                <h2 class="p-archive-visual__text c-title--archive">Search:</h2>
+                <h2 class="p-archive-visual__text c-title">Search:</h2>
+                <span class="p-archive-visual__ja">チーズバーガー</span>
             </div>
 
             <section class="p-menu">

@@ -32,17 +32,19 @@
             margin: 84px 0 0 46px;
         }
     }
-    &__block {
+    & .menu-categorymenu-container {
         margin: 178px 0 0 46px;
         @include pc {
             margin: 130px 0 0 46px;
         }
     }
-    &__menu > h3 {
+    & .menu-item-type-taxonomy > a {
+        font-weight: $bold;
+        display: inline-block;
         margin: 60px 0 40px 0;
         @include font-size(24);
     }
-    &__item {
+    & .sub-menu > li {
         margin: 20px;
         @include font-size(20);
     }

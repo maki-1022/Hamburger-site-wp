@@ -5,6 +5,7 @@
     font-weight: $bold;
     @include font-size(41);
     color: $white;
+    white-space: nowrap;
     position: relative; /* 疑似要素(_)をabsoluteにするため */
     &::after {
         content: "";

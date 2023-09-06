@@ -16,7 +16,7 @@
                         <?php the_post_thumbnail(); ?>
                         <?php the_content(); ?>
                     <?php endwhile; ?>
-                <?php else: ?>
+                <?php else : ?>
                     <p>表示する記事がありません</p>
                 <?php endif; ?>
 

@@ -1,7 +1,7 @@
 @use "../../foundation/forward" as *;
 
 .p-archive-visual {
-    background-image: url(../../img/archive-visual-sp.jpg);
+    background-image: url(../img/archive-visual-sp.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -9,14 +9,15 @@
     height: 285px;  
     position: relative; /* before、タイトルをabsolute */
     margin-bottom: 32px;
+    font-family: $en-heading-font;
     @include tablet {
-        background-image: url(../../img/archive-visual-tablet.jpg);
-        & .c-title--archive {
+        background-image: url(../img/archive-visual-tablet.jpg);
+        & .c-title {
             @include font-size(60);
         }
     }
     @include pc {
-        background-image: url(../../img/archive-visual-pc.jpg);
+        background-image: url(../img/archive-visual-pc.jpg);
     }
     &::before {
         content: "";
@@ -39,5 +40,20 @@
             top: 83px;
         }
     }
-    
+    &__ja {
+        @include font-size(16);
+        font-family: $base-font;
+        font-weight: $bold;
+        color: $white;
+        position: absolute;
+        top: 160px;
+        left: 37px;
+        @include tablet {
+            top: 145px;
+            left: 275px;
+        }
+        @include pc {
+            top: 125px;
+        }
+    }    
 }

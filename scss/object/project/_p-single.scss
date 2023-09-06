@@ -219,4 +219,8 @@
             }
         }
     }
+    // アイキャッチ画像を投稿文内では非表示にする
+    .attachment-post-thumbnail {
+        display: none;
+    }
 }

@@ -9,21 +9,3 @@
     }
 }
 
-.c-title--archive {
-    @extend .c-title;
-    font-family: $en-heading-font;
-    &::after {
-        content: "チーズバーガー";
-        color: $white;
-        font-family: $base-font;
-        @include font-size(16);
-        width: 100%;
-        white-space: nowrap;
-        display: block;
-        @include tablet {
-            display: inline;
-            vertical-align: middle;
-            padding-left: 19px;
-        }
-    }
-}

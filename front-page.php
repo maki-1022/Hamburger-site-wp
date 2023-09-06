@@ -14,7 +14,10 @@
                         <li class="p-panel">                            
                             <div class="p-panel__bg--left">
                                 <div class="p-panel__heading">
-                                    <h2 class="c-heading">Take Out</h2>
+                                    <h2 class="c-heading">
+                                        <!-- カテゴリーリンク -->
+                                        <a href="<?php echo esc_url(get_category_link( '11' )); ?>">Take Out</a>
+                                    </h2>
                                 </div>
                                 <div class="c-flex">
                                     <dl class="p-panel__text u-brown">
@@ -41,7 +44,10 @@
                         <li class="p-panel">                            
                             <div class="p-panel__bg--right">
                                 <div class="p-panel__heading">
-                                    <h2 class="c-heading">Eat In</h2>
+                                    <h2 class="c-heading">
+                                        <!-- カテゴリーリンク -->
+                                        <a href="<?php echo esc_url(get_category_link( '10' )); ?>">Eat In</a>
+                                    </h2>
                                 </div>
                                 <div class="c-flex">
                                     <dl class="p-panel__text u-brown">
