@@ -1139,6 +1139,11 @@ a {
 .p-single ol {
   padding: 0 5%;
 }
+@media screen and (min-width: 768px) {
+  .p-single ol {
+    padding: 0;
+  }
+}
 .p-single .wp-block-code {
   background-color: #F5F5F5;
 }
@@ -1411,6 +1416,11 @@ a {
 }
 .p-page ol {
   padding: 0 5%;
+}
+@media screen and (min-width: 768px) {
+  .p-page ol {
+    padding: 0;
+  }
 }
 .p-page .wp-block-code {
   background-color: #F5F5F5;

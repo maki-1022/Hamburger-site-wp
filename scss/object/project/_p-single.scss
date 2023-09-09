@@ -131,6 +131,9 @@
     }
     & ol {
         padding: 0 5%;
+        @include tablet {
+            padding: 0;
+        }
     }
     // コード
     .wp-block-code {

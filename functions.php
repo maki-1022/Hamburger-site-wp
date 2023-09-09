@@ -10,13 +10,13 @@
         ));
         add_theme_support( 'post-thumbnails' ); //アイキャッチ機能有効化
         add_theme_support( 'title-tag' ); //管理画面からタイトルタグ登録可能に
-        add_theme_support( 'menus' ); //メニューのカスタマイズを有効化
         register_nav_menus( array( //カスタムメニューの有効化
             'footer_nav' => esc_html__( 'footer navigation', 'hamburger-site-wp' ),
             'category_nav' => esc_html__( 'category navigation', 'hamburger-site-wp' ),
         ));
         add_theme_support( 'editor-styles' ); // エディターのスタイルを変更できるようにする
         add_editor_style(); // エディターにフロントエンド用CSSを読み込む
+        add_theme_support( 'automatic-feed-links' ); //投稿とコメントのRSSフィードを有効にする
     }
     add_action( 'after_setup_theme', 'custom_theme_support' );
 
@@ -26,7 +26,7 @@
     // 検索条件が未入力時にfront-page.phpにリダイレクトする(全件表示されるのを防ぐ)
     function set_redirect_template(){
       if ( isset( $_GET['s'] ) && empty( $_GET['s'] ) ) {
-        include( TEMPLATEPATH . '/front-page.php');
+        include( get_template_directory() . '/front-page.php');
         exit;
       }
     }

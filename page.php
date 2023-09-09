@@ -3,7 +3,7 @@
 
     <main class="l-main">            
         <div class="p-page-visual">
-            <h2 class="p-page-visual__text c-title"><?php echo get_the_title(); ?></h2>
+            <h2 class="p-page-visual__text c-title"><?php echo esc_html( get_the_title() ); ?></h2>
         </div>
 
         <section class="p-page">

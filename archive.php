@@ -11,7 +11,7 @@
             <div class="c-inner">
                 <h2 class="c-heading--h2 u-brown">小見出しが入ります</h2>
                 <!-- カテゴリー説明文を表示 -->
-                <p class="p-menu__text u-brown"><?php echo category_description(); ?></p>
+                <p class="p-menu__text u-brown"><?php echo esc_html( category_description() ); ?></p>
                 <!-- card.phpを表示 -->
                 <?php get_template_part( 'card' ); ?>                
                 <!-- ページナビゲーション -->

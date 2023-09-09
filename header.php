@@ -11,17 +11,18 @@
 </head>
 
 <body <?php body_class(); ?>> <!-- ページごとに自動的にタグを追加 -->
+<?php wp_body_open(); ?>
     <div class="l-container">
         <header class="l-header">
             <h1 class="l-header__logo">
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?> "> <!-- ホームURLを取得 -->
-                <img src="<?php echo get_theme_file_uri( './img/Hamburger.svg' ); ?>" alt="ヘッダーHamburgerロゴ">
+                <img src="<?php echo esc_url( get_theme_file_uri( './img/Hamburger.svg' ) ); ?>" alt="ヘッダーHamburgerロゴ">
                 </a>
             </h1>
             <!-- ハンバーガーメニュー -->
             <button class="p-hamburger u-bold js-hamburger">
                 <span>Menu</span>
             </button>
-            <!-- searchform.phpを読み込むテンプレートタグ -->
+            <!-- フォームを読み込むテンプレートタグ -->
             <?php get_search_form(); ?>
         </header>

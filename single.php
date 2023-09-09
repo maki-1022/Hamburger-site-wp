@@ -3,7 +3,7 @@
 
     <main class="l-main">            
         <div class="p-single-visual">
-            <h2 class="p-single-visual__text c-title"><?php echo get_the_title(); ?></h2>
+            <h2 class="p-single-visual__text c-title"><?php echo esc_html( get_the_title() ); ?></h2>
         </div>            
 
         <section class="p-single">                    
@@ -15,6 +15,7 @@
                         <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                         <?php the_post_thumbnail(); ?>
                         <?php the_content(); ?>
+                        <?php wp_link_pages(); ?>
                     <?php endwhile; ?>
                 <?php else : ?>
                     <p>表示する記事がありません</p>
