@@ -14,23 +14,16 @@
     & .menu {
         display: flex;
         justify-content: center;
-        gap: 25px;
         position: relative;
     }
-    & .menu-item-236 > a::after {
-        content: "";
-        width: 1.5px;
-        height: 20px;
-        background-color: $white;
-        position: absolute;
-        top: 40%;
-        left: 51%;
-        @include tablet {
-            top: 55%;
-        }
-        @include pc {
-            top: 62%;
-        }
+    & .menu-item-236 {
+        height: 22px;
+        padding-right: 15px;
+        border-right: 1.5px solid $white;
+    }
+    & .menu-item-198 {
+        height: 22px;
+        padding-left: 15px;
     }
     & .menu-item {
         @include font-size(18);

@@ -1,0 +1,21 @@
+@use "../../foundation/forward" as *;
+
+.error404 {
+    & .l-main {
+        text-align: center;
+        & h1 {
+            margin: 20px 0;
+            @include font-size(30);
+        }
+        & > p {
+            margin: 20px 0;
+            & > a {
+                font-weight: $bold;
+                text-decoration: underline;
+                &:hover {
+                    color: $gray;
+                }
+            }
+        }
+    }
+}

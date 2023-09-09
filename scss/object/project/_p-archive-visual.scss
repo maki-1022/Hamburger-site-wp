@@ -57,3 +57,14 @@
         }
     }    
 }
+
+// search.phpページのメインビジュアル
+.search {
+    & .p-archive-visual {
+        &__ja {
+          @include tablet {
+            left: 295px;
+          }  
+        }
+    }
+}

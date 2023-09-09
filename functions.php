@@ -18,21 +18,41 @@
         add_theme_support( 'editor-styles' ); // エディターのスタイルを変更できるようにする
         add_editor_style(); // エディターにフロントエンド用CSSを読み込む
     }
-
     add_action( 'after_setup_theme', 'custom_theme_support' );
 
     // archive.phpのカテゴリー説明文を取得・表示する際に自動的に生成されるpタグを削除
     remove_filter('term_description','wpautop');
 
+    // 検索条件が未入力時にfront-page.phpにリダイレクトする(全件表示されるのを防ぐ)
+    function set_redirect_template(){
+      if ( isset( $_GET['s'] ) && empty( $_GET['s'] ) ) {
+        include( TEMPLATEPATH . '/front-page.php');
+        exit;
+      }
+    }
+    add_action('template_redirect', 'set_redirect_template');
+
+    // pre_get_postsによるアクションフック
+    function custom_main_query ( $query ) {
+      if ( is_admin() || ! $query -> is_main_query() ) { //管理画面、メインクエリ以外に影響を与えないように
+      return;
+      }
+      if ( $query -> is_search() ) {
+      $query -> set( 'posts_per_page', 5 ); //search.phpの表示件数を3件→5件に変更する
+      $query -> set( 'post_type', 'post' ); //固定ページ・カスタム投稿ページをサイト内検索から除外する
+      }
+      return $query;
+    }
+    add_action( 'pre_get_posts', 'custom_main_query' );
+
     
-    //条件分岐タグを使ってページにより $title を変更する処理
+    //条件分岐タグを使ってページにより $title を変更する
     function change_title_tag( $title ) {  
         if ( is_front_page() && is_home() ) { 
           $title = get_bloginfo( 'name', 'display' );
         } elseif ( is_singular() ) {
           $title = single_post_title( '', false );
-        }
-        
+        }        
         return $title;
       }
       add_filter( 'pre_get_document_title', 'change_title_tag' );

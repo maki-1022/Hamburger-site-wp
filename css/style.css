@@ -129,27 +129,16 @@ a {
 .l-footer .menu {
   display: flex;
   justify-content: center;
-  gap: 25px;
   position: relative;
 }
-.l-footer .menu-item-236 > a::after {
-  content: "";
-  width: 1.5px;
-  height: 20px;
-  background-color: #ffffff;
-  position: absolute;
-  top: 40%;
-  left: 51%;
+.l-footer .menu-item-236 {
+  height: 22px;
+  padding-right: 15px;
+  border-right: 1.5px solid #ffffff;
 }
-@media screen and (min-width: 768px) {
-  .l-footer .menu-item-236 > a::after {
-    top: 55%;
-  }
-}
-@media screen and (min-width: 960px) {
-  .l-footer .menu-item-236 > a::after {
-    top: 62%;
-  }
+.l-footer .menu-item-198 {
+  height: 22px;
+  padding-left: 15px;
 }
 .l-footer .menu-item {
   font-size: 18px;
@@ -686,6 +675,7 @@ a {
   height: auto;
   background-image: url(../img/mushimegane.svg);
   background-position: 12px;
+  font-weight: 700;
 }
 .p-search__text.c-input {
   width: 58%;
@@ -930,6 +920,12 @@ a {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .search .p-archive-visual__ja {
+    left: 295px;
+  }
+}
+
 .p-menu__text {
   line-height: 1.5;
   margin: 25px 0 19px 0;
@@ -943,6 +939,10 @@ a {
   .p-menu__text {
     margin: 20px 0 70px 0;
   }
+}
+.p-menu p:last-child {
+  font-weight: 700;
+  text-decoration: underline;
 }
 
 .p-single-visual {
@@ -1054,19 +1054,13 @@ a {
 }
 .p-single .wp-block-quote {
   background-color: #F5F5F5;
+  padding: 4.8% 7%;
 }
 .p-single .wp-block-quote > p {
-  width: 89%;
-  margin: 0 auto;
-  padding: 30px 0 27px 0;
+  margin: 0;
+  padding-bottom: 7%;
 }
-@media screen and (min-width: 768px) {
-  .p-single .wp-block-quote > p {
-    width: 85%;
-    padding: 50px 0 47px 0;
-  }
-}
-.p-single .wp-block-quote > p > a {
+.p-single .wp-block-quote > cite > a {
   text-decoration: underline;
   color: #0000EE;
 }
@@ -1125,19 +1119,6 @@ a {
   width: 100%;
   margin-bottom: 20px;
 }
-.p-single .wp-block-gallery.wp-block-gallery-1 > figure.wp-block-image:not(#individual-image):last-child {
-  margin: 0;
-}
-@media screen and (min-width: 768px) {
-  .p-single .wp-block-gallery.wp-block-gallery-1 > figure.wp-block-image:not(#individual-image):last-child > img {
-    width: 49%;
-  }
-}
-@media screen and (min-width: 960px) {
-  .p-single .wp-block-gallery.wp-block-gallery-1 > figure.wp-block-image:not(#individual-image):last-child > img {
-    width: 100%;
-  }
-}
 @media screen and (min-width: 768px) {
   .p-single .wp-block-gallery.wp-block-gallery-1 > figure.wp-block-image:not(#individual-image) {
     width: 49%;
@@ -1149,21 +1130,14 @@ a {
     margin-bottom: 0;
   }
 }
-.p-single ul {
+.p-single ul, .p-single ol {
   margin: 17px 0;
 }
-@media screen and (min-width: 768px) {
-  .p-single ul {
-    margin: 3px 0 17px 50px;
-  }
-}
-.p-single ul:nth-of-type(2), .p-single :nth-of-type(5) {
+.p-single ul ul, .p-single ul ol, .p-single ol ul, .p-single ol ol {
   margin-left: 18px;
 }
-@media screen and (min-width: 768px) {
-  .p-single ul:nth-of-type(2), .p-single :nth-of-type(5) {
-    margin-left: 68px;
-  }
+.p-single ol {
+  padding: 0 5%;
 }
 .p-single .wp-block-code {
   background-color: #F5F5F5;
@@ -1353,19 +1327,13 @@ a {
 }
 .p-page .wp-block-quote {
   background-color: #F5F5F5;
+  padding: 4.8% 7%;
 }
 .p-page .wp-block-quote > p {
-  width: 89%;
-  margin: 0 auto;
-  padding: 30px 0 27px 0;
+  margin: 0;
+  padding-bottom: 7%;
 }
-@media screen and (min-width: 768px) {
-  .p-page .wp-block-quote > p {
-    width: 85%;
-    padding: 50px 0 47px 0;
-  }
-}
-.p-page .wp-block-quote > p > a {
+.p-page .wp-block-quote > cite > a {
   text-decoration: underline;
   color: #0000EE;
 }
@@ -1424,19 +1392,6 @@ a {
   width: 100%;
   margin-bottom: 20px;
 }
-.p-page .wp-block-gallery.wp-block-gallery-1 > figure.wp-block-image:not(#individual-image):last-child {
-  margin: 0;
-}
-@media screen and (min-width: 768px) {
-  .p-page .wp-block-gallery.wp-block-gallery-1 > figure.wp-block-image:not(#individual-image):last-child > img {
-    width: 49%;
-  }
-}
-@media screen and (min-width: 960px) {
-  .p-page .wp-block-gallery.wp-block-gallery-1 > figure.wp-block-image:not(#individual-image):last-child > img {
-    width: 100%;
-  }
-}
 @media screen and (min-width: 768px) {
   .p-page .wp-block-gallery.wp-block-gallery-1 > figure.wp-block-image:not(#individual-image) {
     width: 49%;
@@ -1448,21 +1403,14 @@ a {
     margin-bottom: 0;
   }
 }
-.p-page ul {
+.p-page ul, .p-page ol {
   margin: 17px 0;
 }
-@media screen and (min-width: 768px) {
-  .p-page ul {
-    margin: 3px 0 17px 50px;
-  }
-}
-.p-page ul:nth-of-type(2), .p-page :nth-of-type(5) {
+.p-page ul ul, .p-page ul ol, .p-page ol ul, .p-page ol ol {
   margin-left: 18px;
 }
-@media screen and (min-width: 768px) {
-  .p-page ul:nth-of-type(2), .p-page :nth-of-type(5) {
-    margin-left: 68px;
-  }
+.p-page ol {
+  padding: 0 5%;
 }
 .p-page .wp-block-code {
   background-color: #F5F5F5;
@@ -1538,6 +1486,25 @@ a {
   .p-page p strong {
     margin: 4px 0 214px 0;
   }
+}
+
+.error404 .l-main {
+  text-align: center;
+}
+.error404 .l-main h1 {
+  margin: 20px 0;
+  font-size: 30px;
+  font-size: 1.875rem;
+}
+.error404 .l-main > p {
+  margin: 20px 0;
+}
+.error404 .l-main > p > a {
+  font-weight: 700;
+  text-decoration: underline;
+}
+.error404 .l-main > p > a:hover {
+  color: #707070;
 }
 
 /*-- projectフォルダの中の_index.scss --*/

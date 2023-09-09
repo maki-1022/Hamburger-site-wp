@@ -10,5 +10,9 @@
         @include pc {
             margin: 20px 0 70px 0;
         }
-    }    
+    }
+    & p:last-child {
+        font-weight: $bold;
+        text-decoration: underline;
+    }
 }

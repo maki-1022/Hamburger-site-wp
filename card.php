@@ -7,6 +7,7 @@
             <li>
                 <figure class="p-card">
                     <?php if( has_post_thumbnail() ): ?>
+                    <!-- アイキャッチ画像があれば表示し、alt属性をタイトルにする -->
                     <?php the_post_thumbnail('post-thumbnail', array('class' => 'p-card__img', 'alt' => the_title_attribute('echo=0'))); ?>
                     <?php endif; ?>
                     <figcaption class="p-card__menu">
